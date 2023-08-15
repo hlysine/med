@@ -35,30 +35,32 @@ export default function App() {
       </Helmet>
       <p className="text-3xl text-center">Clinical Database</p>
       <p>A series of websites presenting med-related data for practice.</p>
-      {links.map(link => (
-        <div
-          key={link.title}
-          className="card sm:card-side bg-base-300 shadow-xl w-full sm:w-fit sm:min-w-[500px]"
-        >
-          <figure className="bg-base-content p-4">{link.icon}</figure>
-          <div className="card-body">
-            <h2 className="card-title">{link.title}</h2>
-            <p>{link.description}</p>
-            <div className="card-actions justify-end mt-4">
-              <button
-                className="btn btn-primary"
-                onClick={() =>
-                  link.link.startsWith('http')
-                    ? (window.location.href = link.link)
-                    : navigate(link.link)
-                }
-              >
-                Enter
-              </button>
+      <div className="flex flex-col gap-8 items-stretch">
+        {links.map(link => (
+          <div
+            key={link.title}
+            className="card sm:card-side bg-base-300 shadow-xl w-full sm:min-w-[500px]"
+          >
+            <figure className="bg-base-content p-4">{link.icon}</figure>
+            <div className="card-body">
+              <h2 className="card-title">{link.title}</h2>
+              <p>{link.description}</p>
+              <div className="card-actions justify-end mt-4">
+                <button
+                  className="btn btn-primary"
+                  onClick={() =>
+                    link.link.startsWith('http')
+                      ? (window.location.href = link.link)
+                      : navigate(link.link)
+                  }
+                >
+                  Enter
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
