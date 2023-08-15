@@ -21,7 +21,7 @@ const links = [
   {
     icon: <img src={CxrSvg} />,
     title: 'Chest X-ray',
-    description: 'From the NIH Chest X-ray database',
+    description: 'From the NIH Chest X-ray Database',
     link: 'https://lysine-cxr-db.hf.space/',
   },
 ];
