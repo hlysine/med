@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import AuscultateSvg from './auscultate.svg';
 import EcgSvg from './ecg.svg';
 import CxrSvg from './xray.svg';
+import BoneSvg from './bone.svg';
 
 const links = [
   {
@@ -24,12 +25,18 @@ const links = [
     description: 'From the NIH Chest X-ray Database',
     link: 'https://lysine-cxr-db.hf.space/',
   },
+  {
+    icon: <img src={BoneSvg} />,
+    title: 'Bone Marrow Cells',
+    description: 'From the Bone Marrow Cell Classification Database',
+    link: 'https://lysine-marrow-cells.hf.space/',
+  },
 ];
 
 export default function App() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col gap-8 w-full items-center p-4 pt-16">
+    <div className="flex flex-col gap-8 w-full items-center p-4 py-16">
       <Helmet>
         <title>Clinical Database</title>
       </Helmet>
