@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
+import PillSvg from './pill.svg';
 import AuscultateSvg from './auscultate.svg';
 import EcgSvg from './ecg.svg';
 import CxrSvg from './xray.svg';
 import BoneSvg from './bone.svg';
 
 const links = [
+  {
+    icon: <img src={PillSvg} />,
+    title: 'Food and Drug',
+    description: 'Food and drug data from the FDA database',
+    link: 'https://lysine-drugs-db.hf.space/',
+  },
   {
     icon: <img src={AuscultateSvg} />,
     title: 'Auscultation',
