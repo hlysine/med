@@ -3,6 +3,9 @@ FROM node:18
 # Set up a new user named "user" with user ID 1000
 RUN useradd -o -u 1000 user
 
+# Install pm2
+RUN npm install pm2 -g
+
 # Switch to the "user" user
 USER user
 
@@ -26,4 +29,5 @@ RUN cat .env
 RUN npm run build
 
 EXPOSE 7860
-CMD [ "npm", "run", "start" ]
+# CMD [ "npm", "run", "start" ]
+CMD ["pm2-runtime", "processes.json"]
