@@ -28,6 +28,12 @@ const links = [
   },
   {
     icon: <img src={CxrSvg} />,
+    title: 'Tube Placement',
+    description: 'From the CLiP - Catheter and Line Position dataset',
+    link: 'https://lysine-tube-placement.hf.space/',
+  },
+  {
+    icon: <img src={CxrSvg} />,
     title: 'Chest X-ray',
     description: 'From the NIH Chest X-ray Database',
     link: 'https://lysine-cxr-db.hf.space/',
