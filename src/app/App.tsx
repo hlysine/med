@@ -6,8 +6,15 @@ import AuscultateSvg from './auscultate.svg';
 import EcgSvg from './ecg.svg';
 import CxrSvg from './xray.svg';
 import BoneSvg from './bone.svg';
+import ExtremelyBasicSvg from './extremely-basic.svg';
 
 const links = [
+  {
+    icon: <img src={ExtremelyBasicSvg} />,
+    title: 'Extremely Basic',
+    description: 'Acute medicine quick reference',
+    link: 'https://extremely-basic.vercel.app/',
+  },
   {
     icon: <img src={PillSvg} />,
     title: 'Food and Drug',
